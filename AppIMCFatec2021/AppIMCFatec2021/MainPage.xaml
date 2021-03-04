@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppIMCFatec2021.MainPage">
+
+    <StackLayout BackgroundColor="#999" 
+                 Padding="10">
+        
+        <Label Text="CALCULE SEU ÍNDICE DE MASSA CORPORAL"
+               HorizontalTextAlignment="Center"
+               TextColor="White"
+               FontSize="Title"
+               FontAttributes="Bold" />
+
+        <Frame CornerRadius="10"
+               BackgroundColor="#eee"
+               Padding="0">
+            
+            <StackLayout Background="#EEE"
+                     Padding="10">
+            
+            <Label Text="QUAL É SUA ALTURA?"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+            <Entry x:Name="txt_altura" 
+                   Keyboard="Numeric"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="QUAL É SEU PESO?"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+            <Entry x:Name="txt_peso" 
+                   Keyboard="Numeric"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Calcular"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked" />
+
+            <Label x:Name="lbl_resultado" 
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   TextColor="Red"/>
+
+            <Label Text="VALORES DE REFERENCIA"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Menor que 17 = Muito abaixo do peso" TextColor="#000"></TextCell>
+                        <TextCell Text="Entre 17 e 18,49 = Abaixo do peso" TextColor="#000"></TextCell>
+                        <TextCell Text="Entre 18,5 e 24,99 = Peso normal" TextColor="#000"></TextCell>
+                        <TextCell Text="Entre 25 e 29,99 = Acima do peso" TextColor="#000"></TextCell>
+                        <TextCell Text="Entre 30 e 34,99 = Obesidade I" TextColor="#000"></TextCell>
+                        <TextCell Text="Entre 35 e 39,99 = Obesidade II (severa)" TextColor="#000"></TextCell>
+                        <TextCell Text="Acima de 40	Obesidade III (mórbida)" TextColor="#000"></TextCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+        </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
